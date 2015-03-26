@@ -1,0 +1,25 @@
+<!-- fetching using angular's $http service;
+#18 https://github.com/curran/screencasts/tree/gh-pages/introToAngular/examples/snapshots/snapshot20
+-->
+
+<!DOCTYPE html>
+<html ng-app="countryApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body ng-controller="CountryCtrl">
+<table>
+    <tr>
+    <th>Country</th>
+    <th>Population</th>
+    </tr>
+    <tr ng-repeat="country in countries">
+        <td>{{country.name}}</td>
+        <td>{{country.population}}</td>
+    </tr>
+</table>
+</body>
+</html>
