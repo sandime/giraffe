@@ -1,5 +1,5 @@
 <!-- fetching using angular's $http service;
-#18 https://github.com/curran/screencasts/tree/gh-pages/introToAngular/examples/snapshots/snapshot20
+#20 https://github.com/curran/screencasts/tree/gh-pages/introToAngular/examples/snapshots/snapshot20
 -->
 
 <!DOCTYPE html>
@@ -11,12 +11,16 @@
     <script src="main.js"></script>
 </head>
 <body ng-controller="CountryCtrl">
+
+<!--adding a search -->
+Search: <input ng-model="query" type="text">
 <table>
     <tr>
     <th>Country</th>
     <th>Population</th>
     </tr>
-    <tr ng-repeat="country in countries">
+<!--part 2 of search functionality, adding | filter:query"-->
+    <tr ng-repeat="country in countries | filter:query">
         <td>{{country.name}}</td>
         <td>{{country.population}}</td>
     </tr>
