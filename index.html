@@ -26,6 +26,9 @@ Search: <input ng-model="query" type="text">
 <!-- descending order<tr ng-repeat="country in countries | filter:query | orderBy:'-population' "> -->
         <td>{{country.name}}</td>
         <td>{{country.population}}</td>
+<!-- adding country flag and changed json file -->
+ <!--must stop making this mistake :)  <td>img src="{{country.flagURL}}" width= "100" </td> -->
+        <td><img src="{{country.flagURL}}" width="100"></td>
     </tr>
 </table>
 </body>
