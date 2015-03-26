@@ -20,7 +20,7 @@ Search: <input ng-model="query" type="text">
     <th>Population</th>
     </tr>
 <!--part 2 of search functionality, adding | filter:query"-->
-    <tr ng-repeat="country in countries | filter:query">
+    <tr ng-repeat="country in countries | filter:query | orderBy:'population' ">
         <td>{{country.name}}</td>
         <td>{{country.population}}</td>
     </tr>
