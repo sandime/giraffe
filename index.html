@@ -16,11 +16,13 @@
 Search: <input ng-model="query" type="text">
 <table>
     <tr>
-    <th>Country</th>
-    <th>Population</th>
+<!-- adding sort -->
+    <th> <a href="" ng-click="sortField = 'name' ">Country</a></th>
+    <th> <a href="" ng-click="sortField='population' ">Population</a></th>
     </tr>
-<!--part 2 of search functionality, adding | filter:query"-->
-    <tr ng-repeat="country in countries | filter:query | orderBy:'-population' ">
+<!--adding sort - sortfield has no quotes-->
+
+    <tr ng-repeat="country in countries | filter:query | orderBy:sortField ">
 <!-- descending order<tr ng-repeat="country in countries | filter:query | orderBy:'-population' "> -->
         <td>{{country.name}}</td>
         <td>{{country.population}}</td>
