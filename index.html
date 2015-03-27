@@ -19,6 +19,8 @@ Search: <input ng-model="query" type="text">
 <!-- adding sort -->
     <th> <a href="" ng-click="sortField = 'name' ">Country</a></th>
     <th> <a href="" ng-click="sortField='population' ">Population</a></th>
+        <th>Flag</th>
+        <th>Capital</th>
     </tr>
 <!--adding sort - sortfield has no quotes-->
 
@@ -28,7 +30,8 @@ Search: <input ng-model="query" type="text">
         <td>{{country.population}}</td>
 <!-- adding country flag and changed json file -->
  <!--must stop making this mistake :)  <td>img src="{{country.flagURL}}" width= "100" </td> -->
-        <td><img src="{{country.flagURL}}" width="100"></td>
+        <td><img ng-src="{{country.flagURL}}" width="100"></td>
+        <td>{{country.capital}}</td>
     </tr>
 </table>
 </body>
