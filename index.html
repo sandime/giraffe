@@ -21,6 +21,7 @@ Search: <input ng-model="query" type="text">
     <th> <a href="" ng-click="sortField='population' ">Population</a></th>
         <th>Flag</th>
         <th>Capital</th>
+        <th><a href="http://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP)">GDP (PPP)</a></th>
     </tr>
 <!--adding sort - sortfield has no quotes-->
 
@@ -32,6 +33,7 @@ Search: <input ng-model="query" type="text">
  <!--must stop making this mistake :)  <td>img src="{{country.flagURL}}" width= "100" </td> -->
         <td><img ng-src="{{country.flagURL}}" width="100"></td>
         <td>{{country.capital}}</td>
+        <td>{{country.gdp | currency}}</td>
     </tr>
 </table>
 </body>
